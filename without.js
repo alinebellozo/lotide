@@ -32,9 +32,10 @@ const without = function (sourceArr, itemsToRemoveArr) {
       newArr.push(sourceArr[i]);
     }
   }
-  console.log(newArr);
+  return newArr;
 };
 
+console.log(newArr);
 const numbersArr = [10, 20, 30, 40, 50];
 const wordsArr = ["orange", "blueberry", "carrot", "apple"];
 
