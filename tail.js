@@ -1,24 +1,20 @@
 // FUNCTION IMPLEMENTATION
 const assertEqual = function (actual, expected) {
   if (actual !== expected) {
-    console.log(`Oops, ${actual} is different from ${expected}`);
+    // console.log(`Oops, ${actual} is different from ${expected}`);
   } else {
-    console.log(`Yay, ${actual} is equal to ${expected}`);
+    // console.log(`Yay, ${actual} is equal to ${expected}`);
   }
 };
 
 // FUNCTION IMPLEMENTATION
-const head = function (arr) {
-  for (let i = 0; i < arr.length; i++) {
-    if (arr.length === 1) {
-      console.log(arr);
-    } else if (arr.length === 0) {
-      console.log(undefined);
-    }
-  }
-  return arr[0];
+const tail = function (arr) {
+  let newArr = arr.slice(1);
+
+  return newArr;
 };
 
 // TEST CODE
-console.log(assertEqual("Lighthouse Labs", "Bootcamp"));
-console.log(assertEqual(1, 1));
+console.log(tail(["Lighthouse Labs", "Bootcamp"]));
+console.log(tail([1, 2, 3, 4]));
+console.log(tail(["a", "b", "c", "d", "e"]));
