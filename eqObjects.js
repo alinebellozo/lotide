@@ -13,9 +13,9 @@ const eqArrays = function (arr1, arr2) {
 
 const assertEqual = function (actual, expected) {
   if (actual !== expected) {
-    console.log(`Oops, ${actual} is different from ${expected}`);
+    console.log(`Assertion passed: ${actual} === ${expected}`);
   } else {
-    console.log(`Yay, ${actual} is equal to ${expected}`);
+    console.log(`Assertion failed: ${actual} !== ${expected}`);
   }
 };
 
@@ -32,7 +32,6 @@ const eqObjects = function (object1, object2) {
     return false;
   }
   // loop through the keys returned by Object.keys for one of the objects
-
   // If both values are indeed arrays: pass them to eqArrays and ensure that it returns true.
   // Otherwise (else): assume that they are primitives and continue to use === to compare the two values.
   else
