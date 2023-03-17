@@ -2,7 +2,7 @@
 // Instead of doing a simple === check though, this assertion function will make use of your eqArrays function for array comparison.
 const eqArrays = require("./eqArrays");
 
-const assertArraysEqual = function (arr1, arr2) {
+const assertArraysEqual = function(arr1, arr2) {
   if (eqArrays(arr1, arr2)) {
     console.log(`Assertion passed: ${arr1} === ${arr2}`);
   } else {
