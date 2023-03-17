@@ -1,13 +1,5 @@
-const assertEqual = function (actual, expected) {
-  if (actual !== expected) {
-    console.log(`Assertion failed: ${actual} !== ${expected}`);
-  } else {
-    console.log(`Assertion passed: ${actual} === ${expected}`);
-  }
-};
-
 // It should scan the object and return the first key which contains the given value. If no key with that given value is found, then it should return undefined.
-const findKeyByValue = function (obj, value) {
+const findKeyByValue = function(obj, value) {
   // Finding the keys of the values of obj
   const objKeys = Object.keys(obj);
 
@@ -20,24 +12,4 @@ const findKeyByValue = function (obj, value) {
   }
 };
 
-const bestTVShowsByGenre = {
-  sci_fi: "The Expanse",
-  comedy: "The Big Bang Theory",
-  drama: "Grey's Anatomy",
-};
-
-const bestBandsByGenre = {
-  rock: "Foo Fighters",
-  pop: "Coldplay",
-  indie: "The Neighbourhood",
-  pagode: "Exaltasamba",
-  axé: "Banda Eva",
-};
-
-assertEqual(findKeyByValue(bestTVShowsByGenre, "The Big Bang Theory"), "drama");
-assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
-assertEqual(findKeyByValue(bestTVShowsByGenre, "Grey's Anatomy"), "drama");
-
-assertEqual(findKeyByValue(bestBandsByGenre, "Ivete Sangalo"), "axé");
-assertEqual(findKeyByValue(bestBandsByGenre, "Foo Fighters"), "rock");
-assertEqual(findKeyByValue(bestBandsByGenre, "Coldplay"), undefined);
+module.exports = findKeyByValue;
