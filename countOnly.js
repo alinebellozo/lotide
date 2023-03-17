@@ -21,12 +21,6 @@ const countOnly = function (allItems, itemsToCount) {
     //   set a property with that string key to:
     //     the value that was already there (or zero if nothing there) with 1 added to it.
 
-    // if (results[item] === allItems) {
-    //   results[item] += 1;
-    // } else {
-    //   results[item] = 1;
-    // }
-
     // Add an if condition to only increment our count in results if the item is found in the itemsToCount object.
     if (itemsToCount[item]) {
       if (results[item]) {
